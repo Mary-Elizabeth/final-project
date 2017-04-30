@@ -1,33 +1,45 @@
-{% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html>
-    <head>
-        <title>
-            {% block title %}
-                My Hello Web App Project
-            {% endblock title %}
-        </title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        {% block header %}{% endblock header %}
-    </head>
-    <body>
-        <header>
-            <h1>Hello Web App</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">About</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact' %}">Contact</a>
-                    </li>
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <title>
+        {% block title %} Database Web App Project {% endblock title %}
+    </title>
+
+    {% block header %}
+    <div class="jumbotron" style="margin-bottom: 0px;">
+        <a href="http://www.madlibs.com/">
+            <img src="http://4.bp.blogspot.com/-7lkrxgMK4ys/Ul8DL_lzYnI/AAAAAAAAAFs/D4CaYNdNmbc/s1600/MadLibs-Logo.png" width="700px" alt="" /></a>
+        <p>Mad Libs is a phrasal template word game where one player prompts others for a list of words to substitute for blanks in a story, before reading the – often comical or nonsensical – story aloud. The game is frequently played as a party game or
+            as a pastime.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Random</a></p>
+    </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'home' %}" style="font-family: 'Wendy One', sans-serif !important;">MadLibs</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">MadLib 1</a></li>
+                    <li><a href="{% url 'contact' %}">MadLib 2</a></li>
+                    <li><a href="#">Page 3</a></li>
                 </ul>
-            </nav>
-        </header>
-        {% block content %}{% endblock content %}
-        {% block footer %}{% endblock footer %}
-    </body>
+            </div>
+        </nav>
+    {% endblock header %}
+</head>
+
+<body>
+    <header>
+
+    </header>
+    {% block content %}{% endblock content %} {% block footer %}{% endblock footer %}
+</body>
+
 </html>
