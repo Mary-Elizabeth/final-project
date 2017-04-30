@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Bears</h1>
+    <p  id="lib" class="mad-libs">
+        "If you go to some  
+        <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var1 }}" readonly>
+          <span>adjective</span>
+        </label>
+         place like Yellowstone National
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml3var2 }}" readonly>
+          <span>noun</span>
+        </label>
+        , you must know how to deal with the wild animals such as bears, wolves and 
+        <label class="text-center">
+          <input class="text-center" type="text" name="plural_noun" value="{{ ml3var3 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        . The most important of these is the bear. There are three kinds of bears, the grizzly bear, the 
+        <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var4 }}" readonly>
+          <span>adjective</span>
+        </label>
+         bear, and the 
+         <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var5 }}" readonly>
+          <span>adjective</span>
+        </label>
+         bear. Bears spend most of their time 
+         <label class="text-center">
+          <input class="text-center" type="text" name="verb_ing" value="{{ ml3var6 }}" readonly>
+          <span>verb ending in 'ing'</span>
+        </label>
+         or 
+         <label class="text-center">
+          <input class="text-center" type="text" name="verb_ing" value="{{ ml3var7 }}" readonly>
+          <span>verb ending in 'ing'</span>
+        </label>
+        . They look very 
+        <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var8 }}" readonly>
+          <span>adjective</span>
+        </label>
+        , but if you make them 
+        <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var9 }}" readonly>
+          <span>adjective</span>
+        </label>
+        , they might bite your 
+        <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml3var10 }}" readonly>
+          <span>noun</span>
+        </label>
+        . Bears will come up to your car and beg for 
+        <label class="text-center">
+          <input class="text-center" type="text" name="food_plural" value="{{ ml3var11 }}" readonly>
+          <span>food (plural)</span>
+        </label>
+        . They will stand on their hind legs and clap their 
+        <label class="text-center">
+          <input class="text-center" type="text" name="body_part" value="{{ ml3var12 }}" readonly>
+          <span>part of the body</span>
+        </label>
+         together and pretend to be 
+         <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml3var13 }}" readonly>
+          <span>adjective</span>
+        </label>
+        . But do not get out of your 
+        <label class="text-center">
+          <input class="text-center" type="text" name="vehicle" value="{{ ml3var14 }}" readonly>
+          <span>vehicle</span>
+        </label>
+         or offer the bears 
+         <label class="text-center">
+          <input class="text-center" type="text" name="food_plural" value="{{ ml3var15 }}" readonly>
+          <span>food (plural)</span>
+        </label>
+         or 
+         <label class="text-center">
+          <input class="text-center" type="text" name="food_plural" value="{{ ml3var16 }}" readonly>
+          <span>food (plural)</span>
+        </label>
+        . This same advice applies to other wild creatures such as
+        <label class="text-center">
+          <input class="text-center" type="text" name="living_thing" value="{{ ml3var17 }}" readonly>
+          <span>living thing</span>
+        </label>
+         and 
+         <label class="text-center">
+          <input class="text-center" type="text" name="living_thing" value="{{ ml3var18 }}" readonly>
+          <span>living thing</span>
+        </label>
+        . Remember all these rules and you will spend your vacation 
+        <label class="text-center">
+          <input class="text-center" type="text" name="adverb" value="{{ ml3var19 }}" readonly>
+          <span>adverb</span>
+        </label>
+         and not getting eaten by a/an 
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml3var20 }}" readonly>
+          <span>noun</span>
+        </label>
+        ."
+      </p>
+      <br>
+      <br>
+      <br>
+      <p style="font-size: 0.8em">&nbsp;&nbsp;Copyright &copy; 1988 by Price Stern Sloan, a division of Penguin Putnam Books for Young Readers, New York.</p>
+    
+    
+    <style>
+    #lib{
+        padding: 50px;
+    }
+.mad-libs label {
+	white-space: nowrap;
+	padding: 0 0 .5em;
+	
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+.mad-libs input {
+	font: inherit;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #111;
+	outline: 0;
+	display: block;
+}
+.mad-libs label span {
+	font-size: .8em;
+	line-height: 1em;
+	opacity: .7;
+	filter: alpha(opacity = 70);
+}
+    </style>
+ 
+    
+{% endblock content %}

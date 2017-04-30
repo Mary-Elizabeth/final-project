@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from collection.forms import madlib2Form
 from collection.forms import madlib1Form
+from collection.forms import madlib3Form
 from django.http import HttpResponseRedirect
 
 
@@ -15,7 +16,9 @@ def index(request):
     })
     
     
-    
+ #############################################################################################################################
+ ########################################### MAD LIB 1 #######################################################################
+ ############################################################################################################################    
 def madlib1(request):
     form_class = madlib1Form
     
@@ -74,6 +77,10 @@ def madlib1Filled(request):
     })
     
     
+    
+ #############################################################################################################################
+ ########################################### MAD LIB 2 #######################################################################
+ ############################################################################################################################
 def madlib2(request):
     form_class = madlib2Form
     
@@ -150,3 +157,72 @@ def madlib2Filled(request):
     
     
     
+ #############################################################################################################################
+ ########################################### MAD LIB 3 #######################################################################
+ ############################################################################################################################
+def madlib3(request):
+    form_class = madlib3Form
+    
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+        
+        if form.is_valid():
+            request.session['ml3var1'] = request.POST.get('ml3var1', '')
+            request.session['ml3var2'] = request.POST.get('ml3var2', '')
+            request.session['ml3var3'] = request.POST.get('ml3var3', '')
+            request.session['ml3var4'] = request.POST.get('ml3var4', '')
+            request.session['ml3var5'] = request.POST.get('ml3var5', '')
+            request.session['ml3var6'] = request.POST.get('ml3var6', '')
+            request.session['ml3var7'] = request.POST.get('ml3var7', '')
+            request.session['ml3var8'] = request.POST.get('ml3var8', '')
+            request.session['ml3var9'] = request.POST.get('ml3var9', '')
+            request.session['ml3var10'] = request.POST.get('ml3var10', '')
+            request.session['ml3var11'] = request.POST.get('ml3var11', '')
+            request.session['ml3var12'] = request.POST.get('ml3var12', '')
+            request.session['ml3var13'] = request.POST.get('ml3var13', '')
+            request.session['ml3var14'] = request.POST.get('ml3var14', '')
+            request.session['ml3var15'] = request.POST.get('ml3var15', '')
+            request.session['ml3var16'] = request.POST.get('ml3var16', '')
+            request.session['ml3var17'] = request.POST.get('ml3var17', '')
+            request.session['ml3var18'] = request.POST.get('ml3var18', '')
+            request.session['ml3var19'] = request.POST.get('ml3var19', '')
+            request.session['ml3var20'] = request.POST.get('ml3var20', '')
+        
+            
+            return HttpResponseRedirect('madlib3Filled/')
+    else:
+        form =madlib3Form()
+    
+    return render(request, 'madlib3.html', {'form': form_class,})
+    
+def madlib3Filled(request): 
+    # defining the variable
+    ml3var1 =  request.session['ml3var1']
+    ml3var2 =  request.session['ml3var2']
+    ml3var3 =  request.session['ml3var3']
+    ml3var4 =  request.session['ml3var4']
+    ml3var5 =  request.session['ml3var5']
+    ml3var6 =  request.session['ml3var6']
+    ml3var7 =  request.session['ml3var7']
+    ml3var8 =  request.session['ml3var8']
+    ml3var9 =  request.session['ml3var9']
+    ml3var10 =  request.session['ml3var10']
+    ml3var11 =  request.session['ml3var11']
+    ml3var12 =  request.session['ml3var12']
+    ml3var13 =  request.session['ml3var13']
+    ml3var14 =  request.session['ml3var14']
+    ml3var15 =  request.session['ml3var15']
+    ml3var16 =  request.session['ml3var16']
+    ml3var17 =  request.session['ml3var17']
+    ml3var18 =  request.session['ml3var18']
+    ml3var19 =  request.session['ml3var19']
+    ml3var20 =  request.session['ml3var20']
+    
+    # passing the variable to the view
+    return render(request, 'madlib3Filled.html', {
+        'ml3var1': ml3var1, 'ml3var2': ml3var2, 'ml3var3': ml3var3, 'ml3var4': ml3var4,
+        'ml3var5': ml3var5, 'ml3var6': ml3var6, 'ml3var7': ml3var7, 'ml3var8': ml3var8,
+        'ml3var9': ml3var9, 'ml3var10': ml3var10, 'ml3var11': ml3var11, 'ml3var12': ml3var12,
+        'ml3var13': ml3var13, 'ml3var14': ml3var14, 'ml3var15': ml3var15, 'ml3var16': ml3var16,
+        'ml3var17': ml3var17, 'ml3var18': ml3var18, 'ml3var19': ml3var19, 'ml3var20': ml3var20,
+    })  

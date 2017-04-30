@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from django.views.generic import TemplateView
+
 from collection import views
 
 urlpatterns = [
@@ -26,5 +26,7 @@ urlpatterns = [
     url(r'^madlib1/$', views.madlib1, name='madlib1'),
     url(r'^madlib2/madlib2Filled/$', views.madlib2Filled, name='madlib2Filled'),
     url(r'^madlib2/$', views.madlib2, name='madlib2'),
+    url(r'^madlib3/madlib3Filled/$', views.madlib3Filled, name='madlib3Filled'),
+    url(r'^madlib3/$', views.madlib3, name='madlib3'),
     url(r'^admin/', admin.site.urls),
 ]

@@ -40,11 +40,35 @@ class madlib2Form(forms.Form):
     var17 = forms.CharField(label='Noun', max_length=20, required=True)
     var18 = forms.CharField(label='Noun', max_length=20, required=True)
     var19 = forms.CharField(label='Plural Noun', max_length=20, required=True)
-    var20 = forms.CharField(label="Verb Ending In 'ing'", max_length=20, required=True)
+    var20 = forms.CharField(label="Verb Ending in 'ing'", max_length=20, required=True)
     var21 = forms.CharField(label='Verb', max_length=20, required=True)
     var22 = forms.CharField(label='Plural Noun', max_length=20, required=True)
     var23 = forms.CharField(label='Verb', max_length=20, required=True)
     
+    
+    
+class madlib3Form(forms.Form):
+    ml3var1 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var2 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml3var3 = forms.CharField(label='Plural Noun', max_length=20, required=True)
+    ml3var4 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var5 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var6 = forms.CharField(label="Verb Ending in 'ing'", max_length=20, required=True)
+    ml3var7 = forms.CharField(label="Verb Ending in 'ing'", max_length=20, required=True)
+    ml3var8 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var9 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var10 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml3var11 = forms.CharField(label='Food (Plural)', max_length=20, required=True)
+    ml3var12 = forms.CharField(label='Part of the Body (Plural)', max_length=20, required=True)
+    ml3var13 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml3var14 = forms.CharField(label='Vehicle', max_length=20, required=True)
+    ml3var15 = forms.CharField(label='Food (Plural)', max_length=20, required=True)
+    ml3var16 = forms.CharField(label='Food (Plural)', max_length=20, required=True)
+    ml3var17 = forms.CharField(label='Something Alive (Plural)', max_length=20, required=True)
+    ml3var18 = forms.CharField(label='Something Alive (Plural)', max_length=20, required=True)
+    ml3var19 = forms.CharField(label='Adverb', max_length=20, required=True)
+    ml3var20 = forms.CharField(label='Noun', max_length=20, required=True)
+   
     
     # madlib2_email = forms.EmailField(required=True)
     # content = forms.CharField(required=True, widget=forms.Textarea)
