@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Talk Like A Pirate</h1>
+    <p  id="lib" class="mad-libs">
+        "Ye can always pretend to be a bloodthirsty 
+        <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var1 }}" readonly>
+          <span>noun</span>
+        </label>
+        , threatening everyone by waving yer 
+        <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml1var2 }}" readonly>
+          <span>adjective</span>
+        </label>
+         sword in the air, but until ye learn to 
+         <label class="text-center">
+          <input class="text-center" type="text" name="verb" value="{{ ml1var3 }}" readonly>
+          <span>verb</span>
+        </label>
+         like a pirate, ye'll never be 
+         <label class="text-center">
+          <input class="text-center" type="text" name="adverb" value="{{ ml1var4 }}" readonly>
+          <span>adverb</span>
+        </label>
+         accepted as an authentic
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var5 }}" readonly>
+          <span>noun</span>
+        </label>
+         . So here's what ye do: Cleverly work into yer daily conversations 
+         <label class="text-center">
+          <input class="text-center" type="text" name="adjective" value="{{ ml1var6 }}" readonly>
+          <span>adjective</span>
+        </label>
+         pirate phrases such as "Ahoy there, 
+         <label class="text-center">
+          <input class="text-center" type="text" name="plural_noun" value="{{ ml1var7 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        ." "Avast, ye 
+        <label class="text-center">
+          <input class="text-center" type="text" name="plural_noun" value="{{ ml1var8 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        ." and "Shiver me 
+        <label class="text-center">
+          <input class="text-center" type="text" name="plural_noun" value="{{ ml1var9 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        ." Remember to drop all yer g's when ye say such words as <i>sailin'</i>, <i>spittin'</i>, and <i>fightin'</i>. 
+        This will give ye a/an
+        <label class="text-center">
+          <input class="text-center" type="text" name="part_of_the_body" value="{{ ml1var10 }}" readonly>
+          <span>part of the body</span>
+        </label>
+         start to being recognized as a swashbucklin' 
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var11 }}" readonly>
+          <span>noun</span>
+        </label>
+        . Once ye have the lingo down pat, it helps to wear a three-cornered 
+        <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var12 }}" readonly>
+          <span>noun</span>
+        </label>
+         on yer head, stash a/an 
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var13 }}" readonly>
+          <span> noun</span>
+        </label>
+         in yer pants, and keep a/an
+         <label class="text-center">
+          <input class="text-center" type="text" name="noun" value="{{ ml1var14 }}" readonly>
+          <span> noun</span>
+        </label>
+         perched atop yer 
+        <label class="text-center">
+          <input class="text-center" type="text" name="part_of_the_body" value="{{ ml1var10 }}" readonly>
+          <span>part of the body</span>
+        </label>
+        . Aye, now ye be a real pirate!
+      </p>
+    
+    
+    <style>
+    #lib{
+        padding: 50px;
+    }
+.mad-libs label {
+	white-space: nowrap;
+	padding: 0 0 .5em;
+	
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+.mad-libs input {
+	font: inherit;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #111;
+	outline: 0;
+	display: block;
+}
+.mad-libs label span {
+	font-size: .8em;
+	line-height: 1em;
+	opacity: .7;
+	filter: alpha(opacity = 70);
+}
+    </style>
+ 
+    
+{% endblock content %}

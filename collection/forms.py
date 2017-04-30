@@ -1,6 +1,24 @@
 from django.forms import ModelForm
 from django import forms
 
+class madlib1Form(forms.Form):
+    ml1var1 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var2 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml1var3 = forms.CharField(label='Verb', max_length=20, required=True)
+    ml1var4 = forms.CharField(label='Adverb', max_length=20, required=True)
+    ml1var5 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var6 = forms.CharField(label='Adjective', max_length=20, required=True)
+    ml1var7 = forms.CharField(label='Plural Noun', max_length=20, required=True)
+    ml1var8 = forms.CharField(label='Plural Noun', max_length=20, required=True)
+    ml1var9 = forms.CharField(label='Plural Noun', max_length=20, required=True)
+    ml1var10 = forms.CharField(label='Part of the Body', max_length=20, required=True)
+    ml1var11 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var12 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var13 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var14 = forms.CharField(label='Noun', max_length=20, required=True)
+    ml1var15 = forms.CharField(label='Part of the Body', max_length=20, required=True)
+   
+            
         
 class madlib2Form(forms.Form):
     var1 = forms.CharField(label='Animal', max_length=20, required=True)
