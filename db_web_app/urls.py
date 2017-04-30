@@ -22,14 +22,10 @@ from collection import views
 
 urlpatterns = [
     url(r'^$', views.index, name='home'),
+    url(r'^madlib2/madlib2Filled/$', views.madlib2Filled, name='madlib2Filled'),
     url(r'^about/$', 
         TemplateView.as_view(template_name='about.html'),
         name='about'),
-    url(r'^contact/$', views.contact, name='contact'),
-    url(r'^things/(?P<slug>[-\w]+)/$', views.thing_detail, 
-        name='thing_detail'),
-    url(r'^things/(?P<slug>[-\w]+)/edit/$', 
-        views.edit_thing,
-        name='edit_thing'),
+    url(r'^madlib2/$', views.madlib2, name='madlib2'),
     url(r'^admin/', admin.site.urls),
 ]

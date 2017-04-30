@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>If You Give A...</h1>
+    <p  id="lib" class="mad-libs">
+        "If you give a
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var1 }}" readonly>
+          <span>animal</span>
+        </label>
+         a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var2 }}" readonly>
+          <span>food</span>
+        </label>
+        , he is going to ask for a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var3 }}" readonly>
+          <span>noun</span>
+        </label>
+        . When you give him the
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var3 }}" readonly>
+          <span>noun</span>
+        </label>
+        , he will want to 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var4 }}" readonly>
+          <span>verb</span>
+        </label>
+        . When he is finsihed will want to, he will 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var5 }}" readonly>
+          <span>verb</span>
+        </label>
+        . Then he will
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var6 }}" readonly>
+          <span>verb</span>
+        </label>
+         and 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var7 }}" readonly>
+          <span>verb</span>
+        </label>
+         to the 
+         <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var8 }}" readonly>
+          <span>noun</span>
+        </label>
+        . Since that doesn't work out, he will want to go to 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var9 }}" readonly>
+          <span>location</span>
+        </label>
+        . On the way, he will see a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var10 }}" readonly>
+          <span>noun</span>
+        </label>
+         and will want
+         <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var11 }}" readonly>
+          <span>noun</span>
+        </label>
+        . Then you will have to take him to the 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var12 }}" readonly>
+          <span>location</span>
+        </label>
+        . He will 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var13 }}" readonly>
+          <span>verb</span>
+        </label>
+        . When he is done, he will ask you for some 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var14 }}" readonly>
+          <span>food</span>
+        </label>
+        . On the way home he will start a game of
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var15 }}" readonly>
+          <span>game</span>
+        </label>
+        . When you finally get home, you'll have to 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var16 }}" readonly>
+          <span>verb</span>
+        </label>
+        . Then he will want a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var17 }}" readonly>
+          <span>noun</span>
+        </label>
+        . You'll have to find a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var18 }}" readonly>
+          <span>noun</span>
+        </label>
+         and 
+         <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var19 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        .  When hes sees the 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var18 }}" readonly>
+          <span>noun</span>
+        </label>
+        , he will start 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var20 }}" readonly>
+          <span>verb ending in 'ing'</span>
+        </label>
+        . Then he will 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var21 }}" readonly>
+          <span>verb</span>
+        </label>
+         out of 
+         <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var22 }}" readonly>
+          <span>plural noun</span>
+        </label>
+        . Of course, when he is finished he will want to 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var23 }}" readonly>
+          <span>verb</span>
+        </label>
+        . So he will ask for a
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var3 }}" readonly>
+          <span>noun</span>
+        </label>
+        . And chances are if you give him a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var3 }}" readonly>
+          <span>noun</span>
+        </label>
+        , he is going to want a 
+        <label class="text-center">
+          <input class="text-center" type="text" name="animal" value="{{ var2 }}" readonly>
+          <span>food</span>
+        </label>
+        ."
+      </p>
+    
+    
+    <style>
+    #lib{
+        padding: 50px;
+    }
+.mad-libs label {
+	white-space: nowrap;
+	padding: 0 0 .5em;
+	
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+.mad-libs input {
+	font: inherit;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #111;
+	outline: 0;
+	display: block;
+}
+.mad-libs label span {
+	font-size: .8em;
+	line-height: 1em;
+	opacity: .7;
+	filter: alpha(opacity = 70);
+}
+    </style>
+ 
+    
+{% endblock content %}

@@ -3,9 +3,12 @@
 
 {% block content %}
 <h1>If You Give A...</h1>
+<h4>This MadLib is a fun play on the beloved childrens book "If You Give A Mouse A Cookie".</h4>
+<div class="form-group">
 <form role="form" action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+</div>
 {% endblock %}
