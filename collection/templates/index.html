@@ -1,22 +1,69 @@
-{% extends 'base.html' %}
-{% load humanize %}
-{% block title %}
-    Homepage - {{ block.super }}
-{% endblock title %}
+{% extends 'base.html' %} {% load humanize %} {% block title %} Homepage - {{ block.super }} {% endblock title %} {% block content %}
 
-{% block content %}
-    <h1>Hello World!</h1>
-    <!-- here's the variable we are passing in -->
-    <p>{{ number }}</p>
-    <p>{% if number %}Number exists!{% endif %}</p>
-    <p>There are {{ number|apnumber }} dog{{ number|pluralize }}! 
-    {% if number == 6 %}
-    True
-    {% else %}
-    False
-    {% endif %}
-    </p>
-    <p>There are {{ number }} walrus{{ number|pluralize:"es" }}!</p>
-    
-    
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+
+<div class="container" style ="width: 70%;">
+    <hr class="divider">
+    <div id="pirate">
+        <a href="{% url 'madlib1' %}"><img class="image img-circle img-responsive pull-right" src="http://flash.sonypictures.com/shared/movies/thepirates/tumblr/images/ship01.jpg" width="375px" height="375px"></a>
+        <a href="{% url 'madlib1' %}"><h2 class="header">Mad Lib 1:
+            <span class="text-muted subheader">Talk Like A Pirate</span>
+        </h2></a>
+        <p class="lead">Haven't you always wanted to?</p>
+    </div>
+    </a>
+   
+    <hr class="divider">
+
+    <div id="mouse-cookie">
+        <a href="{% url 'madlib2' %}"><img class="image img-circle img-responsive pull-left" src="http://cf.chocolatechocolateandmore.com/wp-content/uploads/2015/11/loaded-chocolate-chip-cookies-recipe-4.jpg" width="375px" height="375px !important"></a>
+        <a href="{% url 'madlib2' %}"><h2 class="header">Mad Lib 2:
+            <span class="text-muted subheader">If You Give A...</span>
+        </h2></a>
+        <p class="lead">This MadLib is a fun play on the beloved childrens book "If You Give A Mouse A Cookie".</p>
+    </div>
+    <hr class="divider">
+   
+    <div id="Bears">
+        <a href="{% url 'madlib3' %}"><img class="image img-circle img-responsive pull-right" src="http://www.bearwitnessimages.com/wp-content/uploads/2016/05/Bear-Witness-grizzly-bear-mobile.jpg" width="375px" height="375px"></a>
+        <a href="{% url 'madlib3' %}"><h2 class="header">Mad Lib 3: 
+            <span class="text-muted subheader">Bears</span>
+        </h2></a>
+        <p class="lead">Danger! They have sharp teeth and claws...</p>
+    </div>
+</div>
+
+<style>
+
+.subheader{
+    font-family: 'Cookie', cursive;
+    font-size: 55px;
+}
+
+.img-circle{
+   margin-top: -100px;
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+ .divider {
+    margin: 80px 0;
+}
+.section {
+    overflow: hidden;
+}
+
+.header {
+    font-family: 'Francois One', sans-serif;
+    color: #2E2E2E;
+    font-size: 50px;
+}
+
+a:hover{
+    color:#2BBBAD;
+}
+</style>
+<!-- /.container -->
+
 {% endblock content %}
